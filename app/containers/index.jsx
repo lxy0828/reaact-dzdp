@@ -14,9 +14,16 @@ class App extends React.Component {
             initDone: false
         }
     }
+    ddd () {
+        console.log(99999)
+    }
+    clickHandler(){
+        console.log(this.ddd())
+    }
     render() {
         return (
             <div>
+                <button onClick={this.clickHandler}>点击</button>
                 {
                     this.state.initDone
                     ? this.props.children
